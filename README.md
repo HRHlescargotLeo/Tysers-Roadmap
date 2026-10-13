@@ -2,7 +2,7 @@
 
 A clickable model of tysers.com rebuilt on Umbraco, using the rebuild and migration to make the improvements from ClerksWell's phase 1 review. Content is migrated from the live site wherever it exists; new content is shown as `[bracketed placeholders]`.
 
-Version 1 · 13 October 2026 · greyscale (structure and content). A designed version in the Tysers look follows by adding `src/css/theme.css` only.
+Version 2 · 13 October 2026 · designed. The Tysers look is applied entirely in `src/css/theme.css`, with photography mapped in `src/js/photos.js`. Delete theme.css (and the photos.js script tags) to return to the greyscale version.
 
 ## View it
 
@@ -36,4 +36,5 @@ node build-includes.js && node validate.js
 - The dark bar at the top is the prototype navigator, not part of the proposed site. Its Notes switch (off by default) shows what we're proposing and why on every page.
 - Names, roles, offices and phone numbers are as published on tysers.com in October 2026. Numbers we believe are wrong are marked "to confirm".
 - P&I club figures are invented sample data; the club names are real.
+- Photography © Tysers, hotlinked from tysers.com. If an image fails to load, an illustrated navy placeholder stays in place. Univers (licensed) is shown with Roboto Condensed as a stand-in.
 - This repository and its Pages site are public.
