@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tysers | Lloyd's insurance and reinsurance broker since 1820</title>
+  <meta name="description" content="Tysers is an international insurance and reinsurance broker and Lloyd's broker, founded in the City of London in 1820. Find a specialist, notify a claim or read our market research.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body data-journey="0">
+  <a class="skip" href="#main">Skip to content</a>
+  <!-- Prototype navigator: not part of the proposed site (R50) -->
+  <div class="proto-nav" role="region" aria-label="Prototype navigator">
+    <div class="container">
+      <span class="pn-name"><a href="../index.html">Tysers reimagined</a><small>Umbraco prototype · greyscale · v1</small></span>
+      <ol aria-label="Journeys">
+        <li><a href="../index.html" data-j="0">Overview</a></li>
+        <li><a href="../pages/people.html" data-j="1">1 Find a specialist</a></li>
+        <li><a href="../pages/claims.html" data-j="2">2 Notify a claim</a></li>
+        <li><a href="../pages/pi-report.html" data-j="3">3 P&amp;I Report</a></li>
+        <li><a href="../pages/specialty.html?id=pi" data-j="4">4 Specialty page</a></li>
+        <li><a href="../pages/contact.html" data-j="5">5 Make an enquiry</a></li>
+      </ol>
+      <button class="pn-switch" type="button" aria-pressed="false" id="notes-switch"><span class="knob" aria-hidden="true"></span>Notes</button>
+    </div>
+  </div>
+
+  <!-- Site header (R01, R03, R04) -->
+  <header class="site-header">
+    <div class="util-bar">
+      <div class="container">
+        <a href="../pages/brokers.html">For brokers</a>
+        <a href="../pages/portal.html">Tysers Portal</a>
+        <a href="../pages/offices.html">Offices</a>
+        <a href="../pages/contact.html">Contact</a>
+        <a href="../pages/search.html">Search</a>
+      </div>
+    </div>
+    <div class="main-bar">
+      <div class="container">
+        <a href="../pages/home.html" aria-label="Tysers home"><span class="wf-placeholder logo">Tysers logo</span></a>
+        <nav class="main-nav" id="main-nav" aria-label="Main">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Who we help &#9662;</a>
+              <div class="nav-flyout wide">
+                <div class="flyout-columns">
+                  <div class="flyout-column">
+                    <h5>Wholesale &amp; Specialty</h5>
+                    <ul>
+                      <li><a href="../pages/wholesale.html">Brokers and wholesale clients</a></li>
+                      <li><a href="../pages/wholesale.html#reinsurance">(Re)insurers and MGAs</a></li>
+                      <li><a href="../pages/brokers.html">Placing business with us</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Tysers Live</h5>
+                    <ul>
+                      <li><a href="../pages/live.html">Entertainment, media and sport</a></li>
+                      <li><a href="../pages/live.html#quote">Request a quote for an event</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Business &amp; Private Clients</h5>
+                    <ul>
+                      <li><a href="../pages/business-private.html">UK businesses</a></li>
+                      <li><a href="../pages/business-private.html#private">Private clients</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Specialties &#9662;</a>
+              <div class="nav-flyout wide">
+                <div class="flyout-columns four">
+                  <div class="flyout-column">
+                    <h5>Marine &amp; Aviation</h5>
+                    <ul>
+                      <li><a href="../pages/specialty.html?id=pi">Protection &amp; Indemnity</a></li>
+                      <li><a href="../pages/specialty.html?id=hull">Hull &amp; War</a></li>
+                      <li><a href="../pages/specialty.html?id=cargo">Cargo</a></li>
+                      <li><a href="../pages/specialty.html?id=aviation">Aviation</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Management Risk</h5>
+                    <ul>
+                      <li><a href="../pages/specialty.html?id=cyber">Cyber</a></li>
+                      <li><a href="../pages/specialty.html?id=do">Directors &amp; Officers</a></li>
+                      <li><a href="../pages/specialty.html?id=pi-prof">Professional Indemnity</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Property, energy and more</h5>
+                    <ul>
+                      <li><a href="../pages/specialties.html?q=property">Property &amp; Casualty</a></li>
+                      <li><a href="../pages/specialty.html?id=energy">Energy &amp; Construction</a></li>
+                      <li><a href="../pages/specialty.html?id=ah">Accident &amp; Health</a></li>
+                      <li><a href="../pages/wholesale.html#reinsurance">Reinsurance</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Tysers Live</h5>
+                    <ul>
+                      <li><a href="../pages/specialties.html?div=Tysers%20Live">Music &amp; live events</a></li>
+                      <li><a href="../pages/specialties.html?ind=Media">Film, TV and media</a></li>
+                      <li><a href="../pages/specialties.html?ind=Sport">Sport and esports</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flyout-foot"><a href="../pages/specialties.html">All specialties, A to Z</a><a href="../pages/contact.html">Not seeing the cover you need?</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Industries &#9662;</a>
+              <div class="nav-flyout wide">
+                <div class="flyout-columns">
+                  <div class="flyout-column"><ul>
+                    <li><a href="../pages/industry.html">Shipping and maritime</a></li>
+                    <li><a href="../pages/specialties.html?ind=Aviation">Aviation and aerospace</a></li>
+                    <li><a href="../pages/specialties.html?ind=Energy">Energy and power</a></li>
+                    <li><a href="../pages/specialties.html?ind=Construction">Construction</a></li>
+                  </ul></div>
+                  <div class="flyout-column"><ul>
+                    <li><a href="../pages/specialties.html?ind=Financial">Financial and professional services</a></li>
+                    <li><a href="../pages/specialties.html?ind=Healthcare">Healthcare</a></li>
+                    <li><a href="../pages/specialties.html?ind=Logistics">Logistics and trade</a></li>
+                  </ul></div>
+                  <div class="flyout-column"><ul>
+                    <li><a href="../pages/specialties.html?ind=Music">Music and live events</a></li>
+                    <li><a href="../pages/specialties.html?ind=Media">Film, TV and advertising</a></li>
+                    <li><a href="../pages/specialties.html?ind=Sport">Sport and esports</a></li>
+                  </ul></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pages/people.html">People</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Insights &#9662;</a>
+              <div class="nav-flyout">
+                <ul>
+                  <li><a href="../pages/insights.html">All insights</a></li>
+                  <li><a href="../pages/pi-report.html">P&amp;I Report 2026</a></li>
+                  <li><a href="../pages/insights.html?type=Claims%20story">Claims stories</a></li>
+                  <li><a href="../pages/insights.html?type=People%20news">People news</a></li>
+                  <li><a href="../pages/insights.html#briefings">Email briefings</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About &#9662;</a>
+              <div class="nav-flyout">
+                <ul>
+                  <li><a href="../pages/about.html">About Tysers</a></li>
+                  <li><a href="../pages/about.html#group">AUB Group</a></li>
+                  <li><a href="../pages/people.html?div=Leadership">Leadership</a></li>
+                  <li><a href="../pages/about.html#culture">Culture and careers</a></li>
+                  <li><a href="../pages/about.html#responsibility">Responsibility</a></li>
+                  <li><a href="../pages/offices.html">Offices</a></li>
+                  <li><a href="../pages/regulatory.html">Regulatory status</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/brokers.html">For brokers</a></li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/portal.html">Tysers Portal</a></li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/offices.html">Offices</a></li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/search.html">Search</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-secondary" href="../pages/contact.html">Get in touch</a>
+          <a class="btn btn-claim" href="../pages/claims.html">Make a claim</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
+    </div>
+  </header>
+  <div class="flyout-backdrop" aria-hidden="true"></div>
+
+
+  <main class="site-main" id="main">
+
+    <!-- Hero (R20, R07) -->
+    <section class="page-head split" aria-labelledby="h-home">
+      <div class="container">
+        <div>
+          <span class="eyebrow">Lloyd's broker since 1820</span>
+          <h1 id="h-home">From risk to reassurance</h1>
+          <p class="lead">An international insurance and reinsurance broker, placing complex and hard-to-place risks for clients and brokers in more than 140 countries.</p>
+          <div class="actions">
+            <a class="btn" href="../pages/people.html">Find a specialist</a>
+            <a class="btn btn-secondary" href="../pages/claim-notify.html">Notify a claim</a>
+          </div>
+        </div>
+        <div class="video-wrap">
+          <div class="wf-placeholder ratio-16-9">Background video, short compressed cut with poster frame</div>
+          <span class="state sr-only"></span>
+          <button class="pause" type="button">Pause video</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <section class="proposal" aria-label="Prototype notes">
+        <div>
+          <h2>What we're proposing</h2>
+          <p>A homepage whose first job is routing. The hero is cut down to one line and two actions, and straight underneath it a visitor chooses who they are, searches for a specialty or a person, or goes directly to notifying a claim.</p>
+          <p>The video stays, if Tysers wants it, but as a short compressed cut with a poster frame and a pause button.</p>
+        </div>
+        <div>
+          <h2>Why</h2>
+          <p>On the live homepage the four service cards sit about three screens down, after a full-height 15.6MB video and the about text. The headline figures are in the HTML as "$0Bn" and "0+" until a script counts them up, so search engines and screen readers read zeros.</p>
+          <p>Here the figures are printed as they are and the routes come first.</p>
+        </div>
+      </section>
+
+      <!-- Audience routes (R20, R01) -->
+      <section aria-labelledby="h-routes">
+        <h2 class="section-title" id="h-routes">Who are you looking for cover for?</h2>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Umbraco</span>A "Route tiles" block. Editors pick the target page, and the heading and line default to that page's own title and summary so they can't drift.</p>
+        <div class="routes">
+          <a class="route" href="../pages/wholesale.html"><strong>Brokers and wholesale clients</strong><span>Marine, aviation, energy, management risk, property and casualty, and accident and health, placed in London and international markets.</span><em>Wholesale &amp; Specialty</em></a>
+          <a class="route" href="../pages/wholesale.html#reinsurance"><strong>(Re)insurers and MGAs</strong><span>Treaty, facultative and hybrid reinsurance programmes, including structured, index and parametric products.</span><em>Reinsurance</em></a>
+          <a class="route" href="../pages/live.html"><strong>Entertainment, media and sport</strong><span>From bands and festivals to film productions, theatres, governing bodies and esports.</span><em>Tysers Live</em></a>
+          <a class="route" href="../pages/business-private.html"><strong>UK businesses and private clients</strong><span>Business insurance, high-value homes, fine art, prestige cars and collections.</span><em>Business &amp; Private Clients</em></a>
+        </div>
+      </section>
+
+      <!-- Finder (R05, R25, R26) -->
+      <section aria-labelledby="h-find">
+        <h2 class="section-title" id="h-find">Find a specialty or a person</h2>
+        <form class="finder" data-search>
+          <div class="field">
+            <label for="home-q">What do you need to insure, or who are you looking for?</label>
+            <input type="search" id="home-q" name="q" placeholder="For example: P&amp;I, festival, Simon Smart, Singapore">
+          </div>
+          <div class="field">
+            <label for="home-try">Popular</label>
+            <p id="home-try" class="wf-meta" style="margin:0"><a href="../pages/specialty.html?id=pi">P&amp;I</a> · <a href="../pages/specialty.html?id=cyber">Cyber</a> · <a href="../pages/specialty.html?id=re">Reinsurance</a> · <a href="../pages/specialty.html?id=festival">Festival</a></p>
+          </div>
+          <button class="btn" type="submit">Search</button>
+        </form>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Results are grouped as specialties, people, insights and offices. A search for anything claim-related puts "Notify a claim" first. "Popular" is set by editors, or taken from search analytics once the site has some.</p>
+      </section>
+
+      <!-- Claims strip (R03, R28) -->
+      <section class="emergency" aria-labelledby="h-claim">
+        <h2 id="h-claim">Need to make a claim?</h2>
+        <div>Notify us online, any time, and get a reference number straight away.<br><a class="btn" href="../pages/claim-notify.html" style="margin-top:.75rem">Notify a claim</a></div>
+        <div>Find the right claims team by division and class of cover.<br><a href="../pages/claims.html#finder">Claims contacts</a></div>
+        <div>Out of hours, UK business and private clients<b>Sedgwick 02920 293036</b><a href="../pages/claims.html#emergency">All out-of-hours lines</a></div>
+      </section>
+
+      <!-- Featured report (R32) -->
+      <section aria-labelledby="h-report">
+        <h2 class="section-title" id="h-report">Latest research</h2>
+        <div class="feature">
+          <div class="wf-placeholder ratio-16-9">Report cover, P&amp;I Report 2026</div>
+          <div>
+            <span class="wf-meta">Report · 22 September 2026</span>
+            <h3>Tysers P&amp;I Report 2026: Who is Pitch Perfect?</h3>
+            <p>Our annual analysis of the International Group of P&amp;I Clubs and the trends shaping the global P&amp;I market: club performance, financial strength, claims activity and underwriting.</p>
+            <a class="btn" href="../pages/pi-report.html">Read the findings</a>
+            <a class="btn btn-secondary" href="../pages/pi-report.html#compare">Compare the clubs</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proof strip (R54, R07) -->
+      <section aria-labelledby="h-proof">
+        <h2 class="section-title" id="h-proof">Tysers in numbers</h2>
+        <div class="statistics">
+          <div class="stat-item"><div class="stat-value">US$3bn+</div><div class="stat-title">premium placed each year</div></div>
+          <div class="stat-item"><div class="stat-value">140+</div><div class="stat-title">countries traded in</div></div>
+          <div class="stat-item"><div class="stat-value">1820</div><div class="stat-title">founded in the City of London</div></div>
+          <div class="stat-item"><div class="stat-value">c1,000</div><div class="stat-title">people worldwide</div></div>
+        </div>
+        <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Figures are real text in the page. They can count up as they scroll into view, but only for visitors who haven't asked their device to reduce motion, and always from the real number rather than from zero.</p>
+      </section>
+
+      <!-- Claims proof (R28) -->
+      <section class="content-highlight" aria-labelledby="h-cs">
+        <div class="wf-placeholder ratio-4-3">Image 4:3</div>
+        <div>
+          <span class="wf-meta">Claims story · Cyber</span>
+          <h2 id="h-cs">How we recovered £80,000 after a cyber fraud claim was first rejected</h2>
+          <p>A caller posing as the client's IT team persuaded a member of staff to install remote access software. Several withdrawals followed, totalling £80,000 and each kept below £25,000 to avoid a second authorisation. The insurer first declined the claim under the fraudulent instruction section.</p>
+          <a href="../pages/article.html?id=cyber-fraud">Read the claims story</a>
+        </div>
+      </section>
+
+      <!-- Insight strip (R53) -->
+      <section aria-labelledby="h-ins">
+        <h2 class="section-title" id="h-ins">Insight</h2>
+        <div class="ins-grid" data-insights="" data-limit="3"></div>
+        <p style="margin-top:1rem"><a href="../pages/insights.html">All insights</a> · <a href="../pages/insights.html#briefings">Get email briefings</a></p>
+      </section>
+
+      <!-- Offices strip (R34) -->
+      <section aria-labelledby="h-off">
+        <h2 class="section-title" id="h-off">Where we are</h2>
+        <p>Headquartered at 70 Fenchurch Street in the City of London, close to Lloyd's, with UK offices in Birmingham, Colchester, Hitchin and Manchester and international offices across Europe, the Middle East, Asia and Australasia.</p>
+        <div class="wf-placeholder embed">Map with office pins (static image, links to the office finder)</div>
+        <p style="margin-top:1rem"><a class="btn btn-secondary" href="../pages/offices.html">Find an office</a></p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Prototype pager (not part of the proposed site) -->
+  <div class="container"><nav class="pager" id="pager" aria-label="Prototype tour"></nav></div>
+  <!-- Site footer (R06) -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Who we help</h4>
+          <ul>
+            <li><a href="../pages/wholesale.html">Wholesale &amp; Specialty</a></li>
+            <li><a href="../pages/live.html">Tysers Live</a></li>
+            <li><a href="../pages/business-private.html">Business &amp; Private Clients</a></li>
+            <li><a href="../pages/brokers.html">For brokers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Find</h4>
+          <ul>
+            <li><a href="../pages/specialties.html">Specialties A to Z</a></li>
+            <li><a href="../pages/people.html">People</a></li>
+            <li><a href="../pages/offices.html">Offices</a></li>
+            <li><a href="../pages/insights.html">Insights</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Claims</h4>
+          <ul>
+            <li><a href="../pages/claim-notify.html">Notify a claim</a></li>
+            <li><a href="../pages/claims.html#contacts">Claims contacts</a></li>
+            <li><a href="../pages/claims.html#emergency">Out of hours</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul>
+            <li><a href="../pages/about.html">About Tysers</a></li>
+            <li><a href="../pages/regulatory.html">Regulatory status</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Privacy and cookies</a></li>
+          </ul>
+        </div>
+        <div class="footer-column follow">
+          <h4>Follow Tysers</h4>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram (Tysers Live)</a>
+          <a class="btn btn-secondary" href="../pages/insights.html#briefings">Get email briefings</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Tysers Insurance Brokers Limited. A member of the AUB Group. Authorised and regulated by the Financial Conduct Authority.</span>
+        <span>Prototype: structure only, not a design</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

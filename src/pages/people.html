@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a specialist | Tysers</title>
+  <meta name="description" content="Search Tysers brokers, claims specialists and leadership by name, specialty, team and office.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-journey="1">
+  <!-- @@include header.html -->
+
+  <main class="site-main" id="main">
+    <!-- People directory (R26) -->
+    <section class="page-head" aria-labelledby="h1">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ul class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/home.html">Home</a></li><li class="breadcrumb-item">People</li></ul></nav>
+        <h1 id="h1">Find a specialist</h1>
+        <p class="lead">Search our brokers, claims specialists and leadership by name, specialty, team or office, and contact them directly.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="proposal" aria-label="Prototype notes">
+        <div>
+          <h2>What we're proposing</h2>
+          <p>A people directory, built on the 135 team member records Tysers already keeps in WordPress. Each person has a profile with their role, specialties, office, contact details and anything they have written, and every specialty, claims and article page draws from the same records.</p>
+          <p>The prototype holds 28 of the people named publicly on tysers.com today, plus three placeholder entries where a team lead still needs naming.</p>
+        </div>
+        <div>
+          <h2>Why</h2>
+          <p>The live sitemap lists 135 profile URLs, such as /team_member/bob-pybus/, and every one we opened was an empty page set to be indexed by Google. So the data exists, and search engines are being told about it, but visitors can't use it.</p>
+          <p>For a broker, the person is usually the reason a client calls.</p>
+        </div>
+      </section>
+
+      <form class="filters" role="search" aria-label="Filter people" onsubmit="return false">
+        <div class="field"><label for="pp-q">Name, role or specialty</label><input type="search" id="pp-q" placeholder="For example: claims, reinsurance, Singapore"></div>
+        <div class="field"><label for="pp-div">Team</label>
+          <select id="pp-div"><option value="">All teams</option><option>Leadership</option><option>Wholesale &amp; Specialty</option><option>Claims</option><option>Tysers Live</option><option>Business &amp; Private Clients</option></select></div>
+        <div class="field"><label for="pp-office">Office</label>
+          <select id="pp-office"><option value="">All offices</option><option>London</option><option>Colchester</option><option>Hitchin</option><option>Manchester</option><option>Dubai</option><option>Singapore</option></select></div>
+        <div class="field"><label for="pp-spec">Specialty</label><select id="pp-spec"><option value="">All specialties</option></select></div>
+      </form>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <p class="result-count" id="pp-count" aria-live="polite"></p>
+        <button class="btn btn-secondary" type="button" id="pp-reset">Clear filters</button>
+      </div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Results update as you type. Contact details show only where the person has agreed to publish them; the rest show a placeholder. "Send an enquiry" opens the enquiry form addressed to that person.</p>
+      <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Which staff should be listed, and with which details? We'd suggest everyone client-facing, with a direct line and email, and a central number for anyone who prefers not to publish theirs.</p>
+      <div class="people-grid" id="people-results"></div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/app.js"></script>
+</body>
+</html>

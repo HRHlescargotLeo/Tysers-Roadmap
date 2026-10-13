@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notify a claim | Tysers</title>
+  <meta name="description" content="Tell Tysers about a loss or incident online. Your notification goes straight to the right claims team and you get a reference number.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-journey="2">
+  <!-- @@include header.html -->
+
+  <main class="site-main" id="main">
+    <!-- Notify a claim (R29) -->
+    <section class="page-head" aria-labelledby="h1">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ul class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/home.html">Home</a></li><li class="breadcrumb-item"><a href="~/pages/claims.html">Claims</a></li><li class="breadcrumb-item">Notify a claim</li></ul></nav>
+        <h1 id="h1">Notify a claim</h1>
+        <p class="lead">Tell us what has happened. It takes about five minutes, you don't need your policy number, and your notification goes straight to the team that handles your class of cover.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="proposal" aria-label="Prototype notes">
+        <div>
+          <h2>What we're proposing</h2>
+          <p>A four-step notification built in Umbraco Forms. The first step routes it; the rest collects only what the claims team needs to start. On sending, the visitor gets a reference and the name of the team, and the team's inbox gets the notification with attachments.</p>
+          <p>Coming from a specialty page or the claims finder, the first step is already filled in.</p>
+        </div>
+        <div>
+          <h2>Why</h2>
+          <p>There is currently no way to notify a claim online. A client finds a name in a list of 14 and phones, which is fine during office hours and if the number is right.</p>
+          <p>This doesn't replace the phone. It gives people a second route, and the claims team a consistent first record.</p>
+        </div>
+      </section>
+
+      <div class="layout">
+        <div>
+          <ol class="steps" aria-label="Progress">
+            <li aria-current="step">Your cover</li>
+            <li>What happened</li>
+            <li>Your details</li>
+            <li>Check and send</li>
+          </ol>
+
+          <form data-stepper novalidate>
+            <div class="form-step">
+              <h2>Your cover</h2>
+              <div class="field"><label for="nc-div">Who placed your policy?</label><select id="nc-div" required data-label="Division" data-error="Choose the Tysers division that placed your policy."><option value="">Choose a division</option></select><p class="field-hint">Not sure? Choose the closest; the team will re-route it if needed.</p></div>
+              <div class="field"><label for="nc-class">What kind of cover?</label><select id="nc-class" required data-label="Class of cover" data-error="Choose the class of cover."><option value="">Choose a class</option></select></div>
+              <div class="field"><label for="nc-policy">Policy or reference number (optional)</label><input type="text" id="nc-policy" data-label="Policy reference"></div>
+              <div class="form-nav"><span></span><button class="btn" type="button" data-next>Continue</button></div>
+            </div>
+
+            <div class="form-step">
+              <h2>What happened</h2>
+              <div class="field"><label for="nc-date">When did it happen?</label><input type="text" id="nc-date" required placeholder="DD/MM/YYYY" data-label="Date of incident" data-error="Enter the date, or your best estimate."></div>
+              <div class="field"><label for="nc-where">Where?</label><input type="text" id="nc-where" data-label="Location" placeholder="Port, address, vessel name or venue"></div>
+              <div class="field"><label for="nc-what">Tell us briefly what happened</label><textarea id="nc-what" rows="5" required data-label="Description" data-error="A sentence or two is enough to start."></textarea></div>
+              <fieldset><legend>Is anyone hurt, or is there ongoing damage?</legend>
+                <div class="choice-grid">
+                  <label class="choice"><input type="radio" name="urgent" value="No" required data-label="Urgent" data-error="Please choose one."> No</label>
+                  <label class="choice"><input type="radio" name="urgent" value="Yes"> Yes: call the out-of-hours number as well</label>
+                </div>
+              </fieldset>
+              <div class="field"><label for="nc-files">Photos or documents (optional)</label><input type="file" id="nc-files" multiple><p class="field-hint">Up to 10 files, 20MB in total. You can send more later.</p></div>
+              <div class="form-nav"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn" type="button" data-next>Continue</button></div>
+            </div>
+
+            <div class="form-step">
+              <h2>Your details</h2>
+              <div class="field"><label for="nc-name">Your name</label><input type="text" id="nc-name" required data-label="Name" data-error="Enter your name."></div>
+              <div class="field"><label for="nc-org">Company or client name</label><input type="text" id="nc-org" data-label="Company"></div>
+              <div class="field"><label for="nc-email">Email</label><input type="email" id="nc-email" required data-label="Email" data-error="Enter an email address like name@company.com."></div>
+              <div class="field"><label for="nc-phone">Phone</label><input type="text" id="nc-phone" required data-label="Phone" data-error="Enter a number we can call you on."></div>
+              <fieldset><legend>Are you the policyholder or their broker?</legend>
+                <div class="choice-grid">
+                  <label class="choice"><input type="radio" name="role" value="Policyholder" required data-label="Role" data-error="Please choose one."> Policyholder</label>
+                  <label class="choice"><input type="radio" name="role" value="Broker"> Producing broker</label>
+                </div>
+              </fieldset>
+              <div class="form-nav"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn" type="button" data-next>Continue</button></div>
+            </div>
+
+            <div class="form-step" data-review>
+              <h2>Check and send</h2>
+              <div class="review"><dl id="review-list"></dl></div>
+              <p class="wf-meta" style="margin-top:1rem">By sending, you agree we can share these details with your insurers to handle the claim. <a href="#">How we use your information</a></p>
+              <div class="form-nav"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn" type="submit">Send notification</button></div>
+            </div>
+          </form>
+
+          <div class="confirm" id="confirm" hidden>
+            <h2>Thank you. Your claim has been notified.</h2>
+            <p>Your reference</p>
+            <p class="ref" id="confirm-ref"></p>
+            <p>It has gone to <strong id="confirm-team"></strong>. Someone from the team will be in touch <span class="ph-copy">[within one working day]</span>. We've emailed you a copy.</p>
+            <p><a href="~/pages/claims.html#guides">What to do while you wait</a> · <a href="~/pages/home.html">Back to the homepage</a></p>
+            <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Prototype only: nothing is sent. In the build, Umbraco Forms emails the team inbox from the routing tree, sends the visitor a copy and stores the entry.</p>
+          </div>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Each step validates before moving on and puts focus on the first problem. Try continuing with the description empty.</p>
+        </div>
+
+        <aside aria-label="Urgent help">
+          <div class="panel dark">
+            <h2>Urgent?</h2>
+            <p>If anyone is hurt or damage is ongoing, call as well as notifying online.</p>
+            <dl class="kv"><dt>UK business and private</dt><dd>02920 293036</dd><dt>Productions</dt><dd>07855 763381</dd></dl>
+            <a href="~/pages/claims.html#emergency">All out-of-hours numbers</a>
+          </div>
+          <div class="panel">
+            <h2>Rather talk?</h2>
+            <p><a href="~/pages/claims.html#finder">Find your claims team</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/app.js"></script>
+</body>
+</html>

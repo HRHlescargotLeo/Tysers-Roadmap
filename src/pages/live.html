@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tysers Live: entertainment, media and sport insurance | Tysers</title>
+  <meta name="description" content="Tysers Live insures artists, productions, promoters, festivals, theatres, venues, governing bodies and esports teams, with its own claims teams in Colchester, Manchester and London.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-journey="5">
+  <!-- @@include header.html -->
+
+  <main class="site-main" id="main">
+    <!-- Division landing: Tysers Live (R21) -->
+    <section class="page-head split" aria-labelledby="h1">
+      <div class="container">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ul class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/home.html">Home</a></li><li class="breadcrumb-item">Tysers Live</li></ul></nav>
+          <span class="eyebrow">Entertainment, media and sport</span>
+          <h1 id="h1">You provide the show. We provide the cover.</h1>
+          <p class="lead">Tysers Live brings together our entertainment and sport expertise under one brand, designing insurance programmes for individuals, companies and organisations working in artistic creation and athletic competition.</p>
+          <div class="actions"><a class="btn" href="#quote">Request a quote</a><a class="btn btn-secondary" href="~/pages/claims.html#contacts">Tysers Live claims</a></div>
+        </div>
+        <div class="wf-placeholder ratio-4-3">Image 4:3</div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="proposal" aria-label="Prototype notes">
+        <div>
+          <h2>What we're proposing</h2>
+          <p>The same division template as Wholesale &amp; Specialty, filled with Tysers Live's practices, people and claims teams, plus a short quote request for events and productions.</p>
+        </div>
+        <div>
+          <h2>Why</h2>
+          <p>On the live Festival page, "Get a Quote" jumps to the team block further down the same page. Tysers Live clients are often booking cover against a date, and a form that captures the date, the venue and the audience size gets the team most of what it needs.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-pr">
+        <h2 class="section-title" id="h-pr">What we cover</h2>
+        <div class="grid grid-3" data-practices="Tysers Live"></div>
+      </section>
+
+      <section aria-labelledby="h-who">
+        <h2 class="section-title" id="h-who">Who we work with</h2>
+        <ul class="ticks cols-2">
+          <li>Artists and bands</li><li>Festivals</li><li>Event management and production</li><li>Event promoters</li><li>Merchandisers</li><li>Stadia and venues</li><li>Talent management</li><li>Tours</li><li>Recording studios and record labels</li><li>Production companies, broadcasters and post-production</li><li>Theatres, from the West End to the Fringe</li><li>Governing bodies, clubs and esports teams</li>
+        </ul>
+      </section>
+
+      <!-- Quote request (I30) -->
+      <section id="quote" class="panel" aria-labelledby="h-q">
+        <h2 id="h-q">Request a quote for an event or production</h2>
+        <form data-simple="q-done" novalidate>
+          <div class="grid grid-2">
+            <div class="field"><label for="q-type">What is it?</label><select id="q-type" required data-error="Choose a type."><option value="">Choose one</option><option>Festival</option><option>Concert or tour</option><option>Conference or corporate event</option><option>Film or TV production</option><option>Commercial or advert</option><option>Theatre production</option><option>Sporting event</option><option>Esports event</option></select></div>
+            <div class="field"><label for="q-date">Date or dates</label><input type="text" id="q-date" required placeholder="For example 12 to 14 June 2027" data-error="Enter the date, even if provisional."></div>
+            <div class="field"><label for="q-where">Venue and location</label><input type="text" id="q-where"></div>
+            <div class="field"><label for="q-size">Expected audience or crew size</label><select id="q-size"><option>Under 500</option><option>500 to 5,000</option><option>5,000 to 50,000</option><option>Over 50,000</option></select></div>
+            <div class="field"><label for="q-name">Name</label><input type="text" id="q-name" required data-error="Enter your name."></div>
+            <div class="field"><label for="q-email">Email</label><input type="email" id="q-email" required data-error="Enter an email address like name@company.com."></div>
+          </div>
+          <button class="btn" type="submit">Request a quote</button>
+        </form>
+        <div id="q-done" hidden><h3>Thank you.</h3><p>Your request has gone to the Tysers Live team, who will be in touch <span class="ph-copy">[within one working day]</span>.</p></div>
+      </section>
+
+      <section aria-labelledby="h-pe">
+        <h2 class="section-title" id="h-pe">Tysers Live people and claims</h2>
+        <div class="people-grid" data-team="ids:live-lead,live-media,sarah-hingston,will-sanderson,karen-brown"></div>
+      </section>
+
+      <section aria-labelledby="h-in">
+        <h2 class="section-title" id="h-in">Insight</h2>
+        <div class="ins-grid" data-insights="Tysers Live" data-limit="3"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/app.js"></script>
+</body>
+</html>

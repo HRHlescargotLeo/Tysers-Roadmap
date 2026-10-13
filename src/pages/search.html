@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search | Tysers</title>
+  <meta name="description" content="Search Tysers specialties, people, insight and offices.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-journey="1">
+  <!-- @@include header.html -->
+
+  <main class="site-main" id="main">
+    <!-- Search results (R05) -->
+    <section class="page-head" aria-labelledby="h1">
+      <div class="container">
+        <h1 id="h1">Search</h1>
+        <form id="search-form" class="finder" style="grid-template-columns:1fr auto" role="search">
+          <div class="field"><label for="search-q">Search for a specialty, person, office or topic</label><input type="search" id="search-q" name="q"></div>
+          <button class="btn" type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="proposal" aria-label="Prototype notes">
+        <div>
+          <h2>What we're proposing</h2>
+          <p>Results grouped by what they are, with a count per group and a line of context on each. A claim-related search puts the claims route first. Try "claim", "Singapore", "cyber" or a person's name.</p>
+        </div>
+        <div>
+          <h2>Why</h2>
+          <p>On the live site a search for "claim" lists a news story about an appointment before the Claims page, then a run of product pages with no labels or summaries to tell them apart.</p>
+        </div>
+      </section>
+      <p class="result-count" id="search-count" aria-live="polite"></p>
+      <div id="search-results"></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Umbraco</span>Built on Examine with a field for content type, so results group and filter by type. Editors can pin a result to a term ("claim" pins Claims).</p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | Tysers</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-journey="0">
+  <!-- @@include header.html -->
+
+  <main class="site-main" id="main">
+    <!-- Helpful 404 (R09) -->
+    <section class="page-head" aria-labelledby="h1">
+      <div class="container">
+        <h1 id="h1">We can't find that page</h1>
+        <p class="lead">It may have moved when we rebuilt the site. Search for what you need, or start from one of these.</p>
+        <form class="finder" style="grid-template-columns:1fr auto" data-search role="search">
+          <div class="field"><label for="nf-q">Search</label><input type="search" id="nf-q" name="q"></div>
+          <button class="btn" type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+    <div class="container">
+      <section class="proposal" aria-label="Prototype notes">
+        <div><h2>What we're proposing</h2><p>A 404 that returns a real 404 status, keeps the header and footer, and offers search and the main routes. Every old URL is redirected at launch, so this page should be rare.</p></div>
+        <div><h2>Why</h2><p>Today a missing page shows "404 Page not found" with nothing else in the page body, and /404-2/, a copy of that message, returns a 200 and is listed in the sitemap.</p></div>
+      </section>
+      <div class="routes">
+        <a class="route" href="~/pages/specialties.html"><strong>Specialties A to Z</strong><span>Every class of cover we place.</span></a>
+        <a class="route" href="~/pages/people.html"><strong>Find a specialist</strong><span>Brokers and claims specialists.</span></a>
+        <a class="route" href="~/pages/claims.html"><strong>Make a claim</strong><span>Notify online or find your claims team.</span></a>
+        <a class="route" href="~/pages/contact.html"><strong>Get in touch</strong><span>We will route your enquiry.</span></a>
+      </div>
+      <p class="wf-meta" style="margin-top:1.5rem"><a href="~/pages/contact.html">Tell us about this broken link</a></p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/app.js"></script>
+</body>
+</html>

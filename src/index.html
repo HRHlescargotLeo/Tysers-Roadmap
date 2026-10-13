@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tysers reimagined: Umbraco prototype</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-journey="0">
+  <!-- @@include protonav.html -->
+  <main id="main">
+    <div class="container">
+      <h1>Tysers reimagined</h1>
+      <p class="lead" style="font-size:1.125rem;max-width:72ch">This is a model of tysers.com rebuilt on Umbraco. We already build and look after web apps for Tysers but not the website, so rather than suggest fixes to a site we don't run, we've modelled what it could look like if the rebuild and migration were used to make them all at once.</p>
+      <p style="max-width:72ch">Content comes from the live site wherever it exists: the specialties, people, offices, claims contacts, reports and articles are Tysers' own. Where something new needs writing, it shows as <span class="ph-copy">[bracketed text]</span>. It is greyscale on purpose, so the conversation is about structure and content first. A designed version in the Tysers look follows.</p>
+
+      <div class="wf-hub-meta"><span>Version 1</span><span>13 October 2026</span><span>Status: for review</span><span>ClerksWell</span></div>
+
+      <h2 class="section-title">Five journeys to try</h2>
+      <div class="journeys">
+        <article class="journey"><span class="n">1</span><h3>Find a specialist</h3><p>Navigation by audience, specialty and industry that ends at a person you can contact, plus a people directory built on records Tysers already has.</p><p class="try"><strong>Try:</strong> open the Industries menu, choose Shipping and maritime, then go from a specialist's card to their profile.</p><a class="btn" href="~/pages/people.html">Open the directory</a></article>
+        <article class="journey"><span class="n">2</span><h3>Notify a claim</h3><p>Emergency numbers first, a claims-team finder by division and class, and an online notification that returns a reference.</p><p class="try"><strong>Try:</strong> choose Tysers Live and Sport in the finder, then "Notify this team online" and leave the description empty.</p><a class="btn" href="~/pages/claims.html">Open Claims</a></article>
+        <article class="journey"><span class="n">3</span><h3>The P&amp;I Report</h3><p>The flagship report given its own permanent page, with findings, previous editions and a sortable club comparison.</p><p class="try"><strong>Try:</strong> sort the clubs by free reserves, then tick two to compare them.</p><a class="btn" href="~/pages/pi-report.html">Open the report</a></article>
+        <article class="journey"><span class="n">4</span><h3>A specialty page</h3><p>One template for all 79 specialties: facts, cover, the whole team with contact details, the class claims lead and related insight.</p><p class="try"><strong>Try:</strong> after P&amp;I, open Cyber from the Specialties menu, then pick anything from Specialties A to Z.</p><a class="btn" href="~/pages/specialty.html?id=pi">Open P&amp;I</a></article>
+        <article class="journey"><span class="n">5</span><h3>Make an enquiry</h3><p>A form that asks who you are and what you need, says which team it will go to, and arrives prefilled from a specialty or a person.</p><p class="try"><strong>Try:</strong> choose "An insurer, reinsurer or MGA", then change "What do you need?" to "To report a claim".</p><a class="btn" href="~/pages/contact.html">Open the form</a></article>
+      </div>
+
+      <h2 class="section-title" style="margin-top:3rem">Every page</h2>
+      <ul class="wf-hub-list">
+        <li><a href="~/pages/home.html">Home</a> <span class="wf-req">R20</span><p>Audience routes, finder, claims strip, latest report, figures, insight and offices.</p></li>
+        <li><a href="~/pages/wholesale.html">Wholesale &amp; Specialty</a> <span class="wf-req">R21</span><p>Division landing with practices, reinsurance, people, claims and insight.</p></li>
+        <li><a href="~/pages/live.html">Tysers Live</a> <span class="wf-req">R21</span><p>The same template for entertainment, media and sport, with a quote request.</p></li>
+        <li><a href="~/pages/business-private.html">Business &amp; Private Clients</a> <span class="wf-req">R21, R22</span><p>The retail division, flagged for the Prestige integration.</p></li>
+        <li><a href="~/pages/industry.html">Industry hub: Shipping and maritime</a> <span class="wf-req">R24</span><p>Everything a shipowner or operator needs on one page.</p></li>
+        <li><a href="~/pages/specialties.html">Specialties A to Z</a> <span class="wf-req">R25</span><p>All 79 specialties with keyword, division and industry filters.</p></li>
+        <li><a href="~/pages/specialty.html?id=pi">Specialty page</a> <span class="wf-req">R23</span><p>P&amp;I in full; any other specialty via the A to Z.</p></li>
+        <li><a href="~/pages/people.html">People</a> and <a href="~/pages/person.html?id=simon-smart">profile</a> <span class="wf-req">R26, R27</span><p>Directory with filters, and one profile template.</p></li>
+        <li><a href="~/pages/claims.html">Claims</a> and <a href="~/pages/claim-notify.html">Notify a claim</a> <span class="wf-req">R28, R29</span><p>Emergency numbers, finder, verified contacts, guides and a four-step notification.</p></li>
+        <li><a href="~/pages/insights.html">Insights</a>, <a href="~/pages/article.html?id=cyber-fraud">article</a> and <a href="~/pages/pi-report.html">P&amp;I Report</a> <span class="wf-req">R30–R32, R39</span><p>Hub with filters and briefings sign-up, article template, report page.</p></li>
+        <li><a href="~/pages/contact.html">Get in touch</a> and <a href="~/pages/offices.html">Offices</a> <span class="wf-req">R33, R34</span><p>Routed enquiry form; every office with its regulator.</p></li>
+        <li><a href="~/pages/brokers.html">For brokers</a> and <a href="~/pages/portal.html">Tysers Portal</a> <span class="wf-req">R35, R36</span><p>Mostly new content, so mostly placeholders.</p></li>
+        <li><a href="~/pages/about.html">About</a> and <a href="~/pages/regulatory.html">Regulatory status</a> <span class="wf-req">R37, R38</span><p>History to date, AUB Group, culture, responsibility, one row per regulated entity.</p></li>
+        <li><a href="~/pages/search.html">Search</a> and <a href="~/pages/404.html">Page not found</a> <span class="wf-req">R05, R09</span><p>Grouped results; a 404 that helps.</p></li>
+        <li><a href="~/modules/library.html">Module library</a> <span class="wf-req">R50–R55</span><p>Every reusable block, shown once, with its working Umbraco name.</p></li>
+      </ul>
+
+      <h2 class="section-title" style="margin-top:3rem">How to review this</h2>
+      <ul class="wf-hub-list">
+        <li><p>The dark bar at the top is the prototype's own navigation and isn't part of the proposed site. Its <strong>Notes</strong> switch shows, on every page, what we're proposing and why, plus yellow notes on behaviour and Umbraco, and red notes for questions we need Tysers to answer. Notes are off by default.</p></li>
+        <li><p>Menus, filters, forms, accordions, the claims finder, the club table and search all work. Nothing is sent anywhere. Links to individual policies, external sites and legal pages go nowhere at this stage.</p></li>
+        <li><p>Text in <span class="ph-copy">[brackets]</span> is content that doesn't exist yet. Names, roles, offices and published phone numbers are as they appear on tysers.com today; numbers we think are wrong are marked "to confirm".</p></li>
+        <li><p>The P&amp;I club figures are invented to show how the comparison works. The club names are real.</p></li>
+        <li><p>Resize the browser or open it on a phone to see the mobile layout and menu.</p></li>
+      </ul>
+    </div>
+  </main>
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/app.js"></script>
+</body>
+</html>

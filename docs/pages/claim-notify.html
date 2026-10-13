@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notify a claim | Tysers</title>
+  <meta name="description" content="Tell Tysers about a loss or incident online. Your notification goes straight to the right claims team and you get a reference number.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body data-journey="2">
+  <a class="skip" href="#main">Skip to content</a>
+  <!-- Prototype navigator: not part of the proposed site (R50) -->
+  <div class="proto-nav" role="region" aria-label="Prototype navigator">
+    <div class="container">
+      <span class="pn-name"><a href="../index.html">Tysers reimagined</a><small>Umbraco prototype · greyscale · v1</small></span>
+      <ol aria-label="Journeys">
+        <li><a href="../index.html" data-j="0">Overview</a></li>
+        <li><a href="../pages/people.html" data-j="1">1 Find a specialist</a></li>
+        <li><a href="../pages/claims.html" data-j="2">2 Notify a claim</a></li>
+        <li><a href="../pages/pi-report.html" data-j="3">3 P&amp;I Report</a></li>
+        <li><a href="../pages/specialty.html?id=pi" data-j="4">4 Specialty page</a></li>
+        <li><a href="../pages/contact.html" data-j="5">5 Make an enquiry</a></li>
+      </ol>
+      <button class="pn-switch" type="button" aria-pressed="false" id="notes-switch"><span class="knob" aria-hidden="true"></span>Notes</button>
+    </div>
+  </div>
+
+  <!-- Site header (R01, R03, R04) -->
+  <header class="site-header">
+    <div class="util-bar">
+      <div class="container">
+        <a href="../pages/brokers.html">For brokers</a>
+        <a href="../pages/portal.html">Tysers Portal</a>
+        <a href="../pages/offices.html">Offices</a>
+        <a href="../pages/contact.html">Contact</a>
+        <a href="../pages/search.html">Search</a>
+      </div>
+    </div>
+    <div class="main-bar">
+      <div class="container">
+        <a href="../pages/home.html" aria-label="Tysers home"><span class="wf-placeholder logo">Tysers logo</span></a>
+        <nav class="main-nav" id="main-nav" aria-label="Main">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Who we help &#9662;</a>
+              <div class="nav-flyout wide">
+                <div class="flyout-columns">
+                  <div class="flyout-column">
+                    <h5>Wholesale &amp; Specialty</h5>
+                    <ul>
+                      <li><a href="../pages/wholesale.html">Brokers and wholesale clients</a></li>
+                      <li><a href="../pages/wholesale.html#reinsurance">(Re)insurers and MGAs</a></li>
+                      <li><a href="../pages/brokers.html">Placing business with us</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Tysers Live</h5>
+                    <ul>
+                      <li><a href="../pages/live.html">Entertainment, media and sport</a></li>
+                      <li><a href="../pages/live.html#quote">Request a quote for an event</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Business &amp; Private Clients</h5>
+                    <ul>
+                      <li><a href="../pages/business-private.html">UK businesses</a></li>
+                      <li><a href="../pages/business-private.html#private">Private clients</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Specialties &#9662;</a>
+              <div class="nav-flyout wide">
+                <div class="flyout-columns four">
+                  <div class="flyout-column">
+                    <h5>Marine &amp; Aviation</h5>
+                    <ul>
+                      <li><a href="../pages/specialty.html?id=pi">Protection &amp; Indemnity</a></li>
+                      <li><a href="../pages/specialty.html?id=hull">Hull &amp; War</a></li>
+                      <li><a href="../pages/specialty.html?id=cargo">Cargo</a></li>
+                      <li><a href="../pages/specialty.html?id=aviation">Aviation</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Management Risk</h5>
+                    <ul>
+                      <li><a href="../pages/specialty.html?id=cyber">Cyber</a></li>
+                      <li><a href="../pages/specialty.html?id=do">Directors &amp; Officers</a></li>
+                      <li><a href="../pages/specialty.html?id=pi-prof">Professional Indemnity</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Property, energy and more</h5>
+                    <ul>
+                      <li><a href="../pages/specialties.html?q=property">Property &amp; Casualty</a></li>
+                      <li><a href="../pages/specialty.html?id=energy">Energy &amp; Construction</a></li>
+                      <li><a href="../pages/specialty.html?id=ah">Accident &amp; Health</a></li>
+                      <li><a href="../pages/wholesale.html#reinsurance">Reinsurance</a></li>
+                    </ul>
+                  </div>
+                  <div class="flyout-column">
+                    <h5>Tysers Live</h5>
+                    <ul>
+                      <li><a href="../pages/specialties.html?div=Tysers%20Live">Music &amp; live events</a></li>
+                      <li><a href="../pages/specialties.html?ind=Media">Film, TV and media</a></li>
+                      <li><a href="../pages/specialties.html?ind=Sport">Sport and esports</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flyout-foot"><a href="../pages/specialties.html">All specialties, A to Z</a><a href="../pages/contact.html">Not seeing the cover you need?</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Industries &#9662;</a>
+              <div class="nav-flyout wide">
+                <div class="flyout-columns">
+                  <div class="flyout-column"><ul>
+                    <li><a href="../pages/industry.html">Shipping and maritime</a></li>
+                    <li><a href="../pages/specialties.html?ind=Aviation">Aviation and aerospace</a></li>
+                    <li><a href="../pages/specialties.html?ind=Energy">Energy and power</a></li>
+                    <li><a href="../pages/specialties.html?ind=Construction">Construction</a></li>
+                  </ul></div>
+                  <div class="flyout-column"><ul>
+                    <li><a href="../pages/specialties.html?ind=Financial">Financial and professional services</a></li>
+                    <li><a href="../pages/specialties.html?ind=Healthcare">Healthcare</a></li>
+                    <li><a href="../pages/specialties.html?ind=Logistics">Logistics and trade</a></li>
+                  </ul></div>
+                  <div class="flyout-column"><ul>
+                    <li><a href="../pages/specialties.html?ind=Music">Music and live events</a></li>
+                    <li><a href="../pages/specialties.html?ind=Media">Film, TV and advertising</a></li>
+                    <li><a href="../pages/specialties.html?ind=Sport">Sport and esports</a></li>
+                  </ul></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pages/people.html">People</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Insights &#9662;</a>
+              <div class="nav-flyout">
+                <ul>
+                  <li><a href="../pages/insights.html">All insights</a></li>
+                  <li><a href="../pages/pi-report.html">P&amp;I Report 2026</a></li>
+                  <li><a href="../pages/insights.html?type=Claims%20story">Claims stories</a></li>
+                  <li><a href="../pages/insights.html?type=People%20news">People news</a></li>
+                  <li><a href="../pages/insights.html#briefings">Email briefings</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About &#9662;</a>
+              <div class="nav-flyout">
+                <ul>
+                  <li><a href="../pages/about.html">About Tysers</a></li>
+                  <li><a href="../pages/about.html#group">AUB Group</a></li>
+                  <li><a href="../pages/people.html?div=Leadership">Leadership</a></li>
+                  <li><a href="../pages/about.html#culture">Culture and careers</a></li>
+                  <li><a href="../pages/about.html#responsibility">Responsibility</a></li>
+                  <li><a href="../pages/offices.html">Offices</a></li>
+                  <li><a href="../pages/regulatory.html">Regulatory status</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/brokers.html">For brokers</a></li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/portal.html">Tysers Portal</a></li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/offices.html">Offices</a></li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+            <li class="nav-item mobile-only"><a class="nav-link" href="../pages/search.html">Search</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-secondary" href="../pages/contact.html">Get in touch</a>
+          <a class="btn btn-claim" href="../pages/claims.html">Make a claim</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
+    </div>
+  </header>
+  <div class="flyout-backdrop" aria-hidden="true"></div>
+
+
+  <main class="site-main" id="main">
+    <!-- Notify a claim (R29) -->
+    <section class="page-head" aria-labelledby="h1">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ul class="breadcrumb-list"><li class="breadcrumb-item"><a href="../pages/home.html">Home</a></li><li class="breadcrumb-item"><a href="../pages/claims.html">Claims</a></li><li class="breadcrumb-item">Notify a claim</li></ul></nav>
+        <h1 id="h1">Notify a claim</h1>
+        <p class="lead">Tell us what has happened. It takes about five minutes, you don't need your policy number, and your notification goes straight to the team that handles your class of cover.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="proposal" aria-label="Prototype notes">
+        <div>
+          <h2>What we're proposing</h2>
+          <p>A four-step notification built in Umbraco Forms. The first step routes it; the rest collects only what the claims team needs to start. On sending, the visitor gets a reference and the name of the team, and the team's inbox gets the notification with attachments.</p>
+          <p>Coming from a specialty page or the claims finder, the first step is already filled in.</p>
+        </div>
+        <div>
+          <h2>Why</h2>
+          <p>There is currently no way to notify a claim online. A client finds a name in a list of 14 and phones, which is fine during office hours and if the number is right.</p>
+          <p>This doesn't replace the phone. It gives people a second route, and the claims team a consistent first record.</p>
+        </div>
+      </section>
+
+      <div class="layout">
+        <div>
+          <ol class="steps" aria-label="Progress">
+            <li aria-current="step">Your cover</li>
+            <li>What happened</li>
+            <li>Your details</li>
+            <li>Check and send</li>
+          </ol>
+
+          <form data-stepper novalidate>
+            <div class="form-step">
+              <h2>Your cover</h2>
+              <div class="field"><label for="nc-div">Who placed your policy?</label><select id="nc-div" required data-label="Division" data-error="Choose the Tysers division that placed your policy."><option value="">Choose a division</option></select><p class="field-hint">Not sure? Choose the closest; the team will re-route it if needed.</p></div>
+              <div class="field"><label for="nc-class">What kind of cover?</label><select id="nc-class" required data-label="Class of cover" data-error="Choose the class of cover."><option value="">Choose a class</option></select></div>
+              <div class="field"><label for="nc-policy">Policy or reference number (optional)</label><input type="text" id="nc-policy" data-label="Policy reference"></div>
+              <div class="form-nav"><span></span><button class="btn" type="button" data-next>Continue</button></div>
+            </div>
+
+            <div class="form-step">
+              <h2>What happened</h2>
+              <div class="field"><label for="nc-date">When did it happen?</label><input type="text" id="nc-date" required placeholder="DD/MM/YYYY" data-label="Date of incident" data-error="Enter the date, or your best estimate."></div>
+              <div class="field"><label for="nc-where">Where?</label><input type="text" id="nc-where" data-label="Location" placeholder="Port, address, vessel name or venue"></div>
+              <div class="field"><label for="nc-what">Tell us briefly what happened</label><textarea id="nc-what" rows="5" required data-label="Description" data-error="A sentence or two is enough to start."></textarea></div>
+              <fieldset><legend>Is anyone hurt, or is there ongoing damage?</legend>
+                <div class="choice-grid">
+                  <label class="choice"><input type="radio" name="urgent" value="No" required data-label="Urgent" data-error="Please choose one."> No</label>
+                  <label class="choice"><input type="radio" name="urgent" value="Yes"> Yes: call the out-of-hours number as well</label>
+                </div>
+              </fieldset>
+              <div class="field"><label for="nc-files">Photos or documents (optional)</label><input type="file" id="nc-files" multiple><p class="field-hint">Up to 10 files, 20MB in total. You can send more later.</p></div>
+              <div class="form-nav"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn" type="button" data-next>Continue</button></div>
+            </div>
+
+            <div class="form-step">
+              <h2>Your details</h2>
+              <div class="field"><label for="nc-name">Your name</label><input type="text" id="nc-name" required data-label="Name" data-error="Enter your name."></div>
+              <div class="field"><label for="nc-org">Company or client name</label><input type="text" id="nc-org" data-label="Company"></div>
+              <div class="field"><label for="nc-email">Email</label><input type="email" id="nc-email" required data-label="Email" data-error="Enter an email address like name@company.com."></div>
+              <div class="field"><label for="nc-phone">Phone</label><input type="text" id="nc-phone" required data-label="Phone" data-error="Enter a number we can call you on."></div>
+              <fieldset><legend>Are you the policyholder or their broker?</legend>
+                <div class="choice-grid">
+                  <label class="choice"><input type="radio" name="role" value="Policyholder" required data-label="Role" data-error="Please choose one."> Policyholder</label>
+                  <label class="choice"><input type="radio" name="role" value="Broker"> Producing broker</label>
+                </div>
+              </fieldset>
+              <div class="form-nav"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn" type="button" data-next>Continue</button></div>
+            </div>
+
+            <div class="form-step" data-review>
+              <h2>Check and send</h2>
+              <div class="review"><dl id="review-list"></dl></div>
+              <p class="wf-meta" style="margin-top:1rem">By sending, you agree we can share these details with your insurers to handle the claim. <a href="#">How we use your information</a></p>
+              <div class="form-nav"><button class="btn btn-secondary" type="button" data-back>Back</button><button class="btn" type="submit">Send notification</button></div>
+            </div>
+          </form>
+
+          <div class="confirm" id="confirm" hidden>
+            <h2>Thank you. Your claim has been notified.</h2>
+            <p>Your reference</p>
+            <p class="ref" id="confirm-ref"></p>
+            <p>It has gone to <strong id="confirm-team"></strong>. Someone from the team will be in touch <span class="ph-copy">[within one working day]</span>. We've emailed you a copy.</p>
+            <p><a href="../pages/claims.html#guides">What to do while you wait</a> · <a href="../pages/home.html">Back to the homepage</a></p>
+            <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Prototype only: nothing is sent. In the build, Umbraco Forms emails the team inbox from the routing tree, sends the visitor a copy and stores the entry.</p>
+          </div>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Each step validates before moving on and puts focus on the first problem. Try continuing with the description empty.</p>
+        </div>
+
+        <aside aria-label="Urgent help">
+          <div class="panel dark">
+            <h2>Urgent?</h2>
+            <p>If anyone is hurt or damage is ongoing, call as well as notifying online.</p>
+            <dl class="kv"><dt>UK business and private</dt><dd>02920 293036</dd><dt>Productions</dt><dd>07855 763381</dd></dl>
+            <a href="../pages/claims.html#emergency">All out-of-hours numbers</a>
+          </div>
+          <div class="panel">
+            <h2>Rather talk?</h2>
+            <p><a href="../pages/claims.html#finder">Find your claims team</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Prototype pager (not part of the proposed site) -->
+  <div class="container"><nav class="pager" id="pager" aria-label="Prototype tour"></nav></div>
+  <!-- Site footer (R06) -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Who we help</h4>
+          <ul>
+            <li><a href="../pages/wholesale.html">Wholesale &amp; Specialty</a></li>
+            <li><a href="../pages/live.html">Tysers Live</a></li>
+            <li><a href="../pages/business-private.html">Business &amp; Private Clients</a></li>
+            <li><a href="../pages/brokers.html">For brokers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Find</h4>
+          <ul>
+            <li><a href="../pages/specialties.html">Specialties A to Z</a></li>
+            <li><a href="../pages/people.html">People</a></li>
+            <li><a href="../pages/offices.html">Offices</a></li>
+            <li><a href="../pages/insights.html">Insights</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Claims</h4>
+          <ul>
+            <li><a href="../pages/claim-notify.html">Notify a claim</a></li>
+            <li><a href="../pages/claims.html#contacts">Claims contacts</a></li>
+            <li><a href="../pages/claims.html#emergency">Out of hours</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul>
+            <li><a href="../pages/about.html">About Tysers</a></li>
+            <li><a href="../pages/regulatory.html">Regulatory status</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Privacy and cookies</a></li>
+          </ul>
+        </div>
+        <div class="footer-column follow">
+          <h4>Follow Tysers</h4>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram (Tysers Live)</a>
+          <a class="btn btn-secondary" href="../pages/insights.html#briefings">Get email briefings</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Tysers Insurance Brokers Limited. A member of the AUB Group. Authorised and regulated by the Financial Conduct Authority.</span>
+        <span>Prototype: structure only, not a design</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

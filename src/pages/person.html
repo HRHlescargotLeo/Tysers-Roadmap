@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Smart | Tysers</title>
+  <meta name="description" content="Profile, specialties and contact details for a Tysers specialist.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-journey="1">
+  <!-- @@include header.html -->
+
+  <main class="site-main" id="main">
+    <div id="person">
+    <!-- Person profile (R27) -->
+    <section class="page-head split" aria-labelledby="pr-name">
+      <div class="container">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ul class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/home.html">Home</a></li><li class="breadcrumb-item"><a href="~/pages/people.html">People</a></li><li class="breadcrumb-item" id="pr-crumb">Simon Smart</li></ul></nav>
+          <h1 id="pr-name">Simon Smart</h1>
+          <p class="lead" id="pr-role">Head of P&amp;I, Marine &amp; Aviation</p>
+          <div class="actions"><a class="btn" id="pr-enquiry" href="~/pages/contact.html">Send an enquiry</a><a class="btn btn-secondary" href="#">Download contact card (vCard)</a></div>
+        </div>
+        <div class="wf-placeholder ratio-4-3">Portrait 4:3</div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="proposal" aria-label="Prototype notes">
+        <div>
+          <h2>What we're proposing</h2>
+          <p>One profile per person, generated from their People record. Try another name from the directory and the same template fills with their details.</p>
+          <p>Everything after the biography is automatic: specialties come from the specialty pages they're picked on, and insight from the articles that name them as author.</p>
+        </div>
+        <div>
+          <h2>Why</h2>
+          <p>Today these URLs exist and are empty. Filled in, they become the pages a client finds when they search for a broker's name, which is how a fair amount of specialty business probably starts.</p>
+        </div>
+      </section>
+
+      <div class="layout">
+        <div>
+          <section aria-labelledby="h-bio">
+            <h2 class="section-title" id="h-bio">About</h2>
+            <p class="ph-copy">[Biography, 80 to 150 words, written with the person: their experience, the clients and classes they work on, languages, and market roles such as committee seats.]</p>
+            <p class="wf-note" data-note="1"><span class="wf-note-label">Umbraco</span>Person document type: name, role, team, office, photo, biography, email, direct line, LinkedIn, languages, and a "publish contact details" switch. Profiles without a biography are not indexed until one is added.</p>
+          </section>
+          <section aria-labelledby="h-specs">
+            <h2 class="section-title" id="h-specs">Specialties</h2>
+            <ul class="ticks" id="pr-specs"></ul>
+          </section>
+          <section aria-labelledby="h-ins">
+            <h2 class="section-title" id="h-ins">Insight</h2>
+            <div class="ins-grid" id="pr-insights"></div>
+          </section>
+          <section aria-labelledby="h-peers">
+            <h2 class="section-title" id="h-peers">Others in the team</h2>
+            <div class="people-grid" id="pr-peers"></div>
+          </section>
+        </div>
+        <aside aria-label="Contact details">
+          <div class="panel">
+            <h2>Contact</h2>
+            <dl class="kv" id="pr-meta"></dl>
+          </div>
+        </aside>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/app.js"></script>
+</body>
+</html>

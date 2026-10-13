@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get in touch | Tysers</title>
+  <meta name="description" content="Send an enquiry to the right Tysers team. Tell us who you are and what you need, and we will route it to a specialist.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-journey="5">
+  <!-- @@include header.html -->
+
+  <main class="site-main" id="main">
+    <!-- Routed enquiry form (R33) -->
+    <section class="page-head" aria-labelledby="h1">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ul class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/home.html">Home</a></li><li class="breadcrumb-item">Get in touch</li></ul></nav>
+        <h1 id="h1">Get in touch</h1>
+        <p class="lead">Tell us a little about who you are and what you need, and your enquiry goes straight to the right team rather than a general inbox.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="proposal" aria-label="Prototype notes">
+        <div>
+          <h2>What we're proposing</h2>
+          <p>One enquiry form that asks three routing questions before the message: who you are, what you need and which specialty it concerns. As the visitor answers, the form says which team it will go to. Arriving from a specialty page or a person's profile, it is already addressed.</p>
+          <p>A claim typed in here is pointed to the claims form, and press enquiries go to the press office.</p>
+        </div>
+        <div>
+          <h2>Why</h2>
+          <p>Today the same four fields (name, telephone, email, message) appear on Contact, Business Insurance, High-Net-Worth and in the footer of every page, and nothing asks what the enquiry is about. Someone at Tysers presumably reads each one and forwards it.</p>
+          <p>Try arriving from <a href="~/pages/specialty.html?id=cyber">Cyber</a> or from <a href="~/pages/person.html?id=richard-johnston">Richard Johnston's profile</a> to see the prefill.</p>
+        </div>
+      </section>
+
+      <div class="layout">
+        <div>
+          <form id="enquiry" novalidate>
+            <div id="eq-to" class="route-out" hidden></div>
+            <fieldset><legend>Which best describes you?</legend>
+              <div class="choice-grid">
+                <label class="choice"><input type="radio" name="who" value="broker" required data-error="Choose the option closest to you."> A broker placing business</label>
+                <label class="choice"><input type="radio" name="who" value="client"> A company with specialist risks</label>
+                <label class="choice"><input type="radio" name="who" value="reinsurer"> An insurer, reinsurer or MGA</label>
+                <label class="choice"><input type="radio" name="who" value="event"> In entertainment, media or sport</label>
+                <label class="choice"><input type="radio" name="who" value="business"> A UK business</label>
+                <label class="choice"><input type="radio" name="who" value="private"> A private client</label>
+              </div>
+            </fieldset>
+            <div class="grid grid-2">
+              <div class="field"><label for="eq-need">What do you need?</label>
+                <select id="eq-need" required data-error="Choose what you need.">
+                  <option value="">Choose one</option>
+                  <option value="new">New cover or a quote</option>
+                  <option value="existing">A question about existing cover</option>
+                  <option value="claim">To report a claim</option>
+                  <option value="media">Press or media enquiry</option>
+                  <option value="careers">Careers</option>
+                  <option value="other">Something else</option>
+                </select></div>
+              <div class="field"><label for="eq-spec">Specialty (optional)</label><select id="eq-spec"><option value="">Not sure, or not listed</option></select></div>
+            </div>
+            <div id="eq-route" aria-live="polite"></div>
+            <div class="grid grid-2">
+              <div class="field"><label for="eq-name">Name</label><input type="text" id="eq-name" required data-error="Enter your name."></div>
+              <div class="field"><label for="eq-org">Company</label><input type="text" id="eq-org"></div>
+              <div class="field"><label for="eq-email">Email</label><input type="email" id="eq-email" required data-error="Enter an email address like name@company.com."></div>
+              <div class="field"><label for="eq-phone">Phone (optional)</label><input type="text" id="eq-phone"></div>
+              <div class="field"><label for="eq-country">Country</label><select id="eq-country"><option>United Kingdom</option><option>United Arab Emirates</option><option>Saudi Arabia</option><option>Singapore</option><option>Belgium</option><option>Other</option></select></div>
+            </div>
+            <div class="field"><label for="eq-msg">Your message</label><textarea id="eq-msg" rows="5" required data-error="Tell us briefly what you need."></textarea></div>
+            <button class="btn" type="submit">Send enquiry</button>
+          </form>
+          <div class="confirm" id="eq-confirm" hidden>
+            <h2>Thank you. Your enquiry has been sent.</h2>
+            <p>It has gone to <strong id="eq-confirm-team"></strong>. We will reply <span class="ph-copy">[within one working day]</span>.</p>
+            <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Prototype only: nothing is sent. In the build, Umbraco Forms routes by the answers to the team inbox set on the specialty or person.</p>
+          </div>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>The "Goes to" line updates as each question is answered. Choose "To report a claim" to see the form point elsewhere.</p>
+        </div>
+        <aside aria-label="Other ways to contact us">
+          <div class="panel"><h2>Head office</h2><p>70 Fenchurch Street<br>London EC3M 4BR<br>+44 (0)20 3037 8000</p><a href="~/pages/offices.html">All offices</a></div>
+          <div class="panel"><h2>Press and media</h2><p>Celia Mather<br>+44 (0)7585 329353<br>celia.mather@tysers.com</p></div>
+          <div class="panel dark"><h2>Making a claim?</h2><a class="btn" href="~/pages/claim-notify.html">Notify a claim</a></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/app.js"></script>
+</body>
+</html>
